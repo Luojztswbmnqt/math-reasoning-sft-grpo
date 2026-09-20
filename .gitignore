@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+
+# Model outputs and checkpoints
+output/
+
+# Generated datasets
+dataset/
+
+# Logs
+*.log
+.ipynb_checkpoints/
