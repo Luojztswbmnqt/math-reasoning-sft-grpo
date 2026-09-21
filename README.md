@@ -23,13 +23,23 @@ The project explores how a small language model can be improved on mathematical 
 4. Use the merged SFT model as the initialization for GRPO training.
 5. Evaluate the Base, SFT, and GRPO models using the same GSM8K evaluation pipeline.
 
-## Preliminary Result
+## Preliminary Results
 
-The current GRPO checkpoint achieves:
+The project follows a two-stage post-training pipeline:
 
-**38.44% accuracy on the GSM8K test split (507 / 1319).**
+**Base Model → SFT → GRPO**
 
-This is an initial experiment. Further controlled comparisons between the Base, SFT, and GRPO checkpoints are being conducted under identical generation settings.
+Initial evaluations show progressive improvement in mathematical reasoning performance:
+
+| Stage | GSM8K Test Accuracy | Evaluation Setting |
+|---|---:|---|
+| Qwen2.5-0.5B Base | 33.43% | 256-token generation limit |
+| + LoRA SFT | 35.48% | 256-token generation limit |
+| + GRPO (v2) | **39.27%** | 256-token generation limit |
+
+The SFT stage improved both answer formatting and task accuracy, while GRPO further improved mathematical reasoning performance using rule-based correctness rewards.
+
+Because the earlier Base and SFT evaluations used a shorter generation limit, these numbers should be treated as preliminary rather than a strictly controlled comparison. A final comparison under identical generation settings is being conducted.
 
 ## Current Experiments
 
