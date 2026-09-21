@@ -1,0 +1,14 @@
+{
+  "train_runtime": 21862.4989,
+  "train_samples_per_second": 0.32,
+  "train_steps_per_second": 0.16,
+  "total_flos": 0.0,
+  "train_loss": 0.004283154838430554,
+  "epoch": 1.0,
+  "base_model": "/root/math-reasoning-sft-grpo/output/sft/merged_model",
+  "train_examples": 7000,
+  "num_generations": 8,
+  "reward": "numeric correctness only",
+  "moving_average_window": 50,
+  "final_adapter": "/root/math-reasoning-sft-grpo/output/grpo_k8/final_adapter"
+}
