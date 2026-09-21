@@ -14,9 +14,9 @@ else:
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_DIR = ROOT / "output/sft/merged_model"
-ADAPTER_DIR = ROOT / "output/grpo/final_adapter"
+ADAPTER_DIR = ROOT / "output/grpo_k8/final_adapter"
 DATA_FILE = ROOT / "dataset/test.jsonl"
-OUTPUT_DIR = ROOT / "output/grpo_eval"
+OUTPUT_DIR = ROOT / "output/grpo_k8_eval"
 MAX_PROMPT_LENGTH = 512
 BATCH_SIZE = 16
 MAX_NEW_TOKENS = 256
